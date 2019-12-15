@@ -3,9 +3,9 @@ package com.learning;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloWorld {
+public class HelloWorldImpl implements HelloWorldService{
 
-    public void helloWorld() {
+    public void sayHello() {
         System.out.println("Hello World");
     }
 }

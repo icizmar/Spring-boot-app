@@ -9,8 +9,10 @@ public class SpringBootAppApplication {
 
     public static void main(String[] args) {
         ApplicationContext appContext = SpringApplication.run(SpringBootAppApplication.class, args);
-        HelloWorld helloWorld = (HelloWorld) appContext.getBean("helloWorld");
-        helloWorld.helloWorld();
+        ConstructorBasedService constructorBasedService = (ConstructorBasedService) appContext.getBean("constructorBasedService");
+        SetterBasedService setterBasedService = (SetterBasedService) appContext.getBean("setterBasedService");
+        constructorBasedService.getMessage();
+        setterBasedService.getMessage();
     }
 
 }
