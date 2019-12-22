@@ -1,10 +1,11 @@
-package com.learning;
+package com.learning.controllers;
 
+import com.learning.services.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
-@Component
-public class SetterBasedService {
+@Controller
+public class GreetingController {
 
     private HelloWorldService helloWorldService;
 
@@ -13,7 +14,7 @@ public class SetterBasedService {
         this.helloWorldService = helloWorldService;
     }
 
-    public void getMessage(){
-        helloWorldService.sayHello();
+    public String seyHello(){
+        return helloWorldService.sayGreeting();
     }
 }
